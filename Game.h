@@ -16,7 +16,6 @@ class Game
     sf::RenderWindow *window;
     sf::Event ev;
     bool showPlayAgain;
-    bool quit;
 
     sf::Font font;
     sf::Text uiText;
@@ -40,23 +39,22 @@ class Game
     void initText();
     void initVars();
     void intWin();
+    const bool isRunning() const;
+    const bool isGameOver() const;
+    void renderText(sf::RenderTarget&  target);
+    void updateText();
+    void spawnEnemy();
+    void updateEnemies();
+    void renderEnemies(sf::RenderTarget& target);
+    void pollEvents();
+    void updateMousePosWin();
+    void initPlayAgain();
     public:
         Game();
         ~Game();
-
         bool resume();
-        const bool isRunning() const;
-        const bool isGameOver() const;
-        void renderText(sf::RenderTarget&  target);
-        void updateText();
-        void spawnEnemy();
-        void updateEnemies();
-        void renderEnemies(sf::RenderTarget& target);
-        void pollEvents();
-        void updateMousePosWin();
         void update();
         void render();
-        void initPlayAgain();
 };
 
 #endif

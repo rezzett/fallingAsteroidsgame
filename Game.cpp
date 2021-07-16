@@ -189,7 +189,6 @@ void Game::initVars() {
     points = 0;
     mouseHeld = false;
     showPlayAgain = false;
-    quit = false;
 
     font.loadFromFile("JetBrains Mono Extra Bold Nerd Font Complete.ttf");
 }
@@ -217,7 +216,6 @@ bool Game::resume() {
             gameOver = false;
             return false;
         } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::N)) {
-            quit = true;
             return true;
         }
     }
