@@ -11,10 +11,6 @@ Game::Game() {
 
 Game::~Game() { delete window; }
 
-const bool Game::isRunning() const {
-    return window->isOpen();
-}
-
 const bool Game::isGameOver() const {
     return gameOver;
 }

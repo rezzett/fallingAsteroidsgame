@@ -39,7 +39,6 @@ class Game
     void initText();
     void initVars();
     void intWin();
-    const bool isRunning() const;
     const bool isGameOver() const;
     void renderText(sf::RenderTarget&  target);
     void updateText();
